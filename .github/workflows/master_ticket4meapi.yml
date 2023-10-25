@@ -31,7 +31,7 @@ jobs:
       with:
         push: true
         tags: ticket4me.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_087bc340868c4f6d819839bba70dd0b2 }}/ticket4me:${{ github.sha }}
-        file: ./src/Ticket4me.Api/Dockerfile
+        file: ./Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
