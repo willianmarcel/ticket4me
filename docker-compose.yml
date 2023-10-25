@@ -1,0 +1,26 @@
+version: '3.4'
+services:
+  app:
+    container_name: ticket4me_app
+    image: ticket4me.azurecr.io/ticket4me:latest
+    restart: unless-stopped
+    ports:
+      - 5000:80
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - ticket4me.db
+
+  ticket4me.db:
+    container_name: ticket4medb
+    hostname: ticket4medb
+    image: mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: T1ck3t4me@!
+
+networks:
+  default:
+    name: service_catalog
