@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Ticket4me.Infra.Data.EF.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateCategoryTable : Migration
+    public partial class CreateCategoryTablePrd : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

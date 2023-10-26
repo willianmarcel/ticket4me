@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Ticket4me.Domain\Ticket4me.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

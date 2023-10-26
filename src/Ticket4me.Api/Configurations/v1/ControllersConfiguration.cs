@@ -28,11 +28,9 @@ public static class ControllersConfiguration
 
     public static WebApplication UseDocumentation(this WebApplication app)
     {
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        }
+        app.UseSwagger();
+        app.UseSwaggerUI();
+
         return app;
     }
 }

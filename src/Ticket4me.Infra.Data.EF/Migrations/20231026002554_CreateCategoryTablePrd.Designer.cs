@@ -11,8 +11,8 @@ using Ticket4me.Infra.Data.EF.Context.v1;
 namespace Ticket4me.Infra.Data.EF.Migrations
 {
     [DbContext(typeof(Ticket4meDbContext))]
-    [Migration("20231025190229_CreateCategoryTable")]
-    partial class CreateCategoryTable
+    [Migration("20231026002554_CreateCategoryTablePrd")]
+    partial class CreateCategoryTablePrd
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
