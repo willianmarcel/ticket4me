@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+*.Production.json
+/src/Ticket4me.Api/appsettings.Production.json
