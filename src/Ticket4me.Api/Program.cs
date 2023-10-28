@@ -10,12 +10,22 @@ builder.Services
 
 builder.Services.AddSwagger();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .AllowCredentials());
+});
+
 var app = builder.Build();
 
 app.MigrateDatabase();
 app.UseDocumentation();
 app.UseHttpsRedirection();
 app.UseAuthorization();
+app.UseCors("CorsPolicy");
 app.MapControllers();
 
 app.Run();

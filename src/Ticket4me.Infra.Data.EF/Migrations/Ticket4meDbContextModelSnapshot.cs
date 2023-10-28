@@ -45,6 +45,48 @@ namespace Ticket4me.Infra.Data.EF.Migrations
 
                     b.ToTable("Categories");
                 });
+
+            modelBuilder.Entity("Ticket4me.Domain.Entities.Event", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(10000)
+                        .HasColumnType("varchar(10000)");
+
+                    b.Property<string>("Finish")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("Start")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Events");
+                });
 #pragma warning restore 612, 618
         }
     }
